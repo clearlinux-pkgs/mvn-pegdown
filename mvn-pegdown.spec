@@ -4,10 +4,12 @@
 #
 Name     : mvn-pegdown
 Version  : 1.2.1
-Release  : 1
+Release  : 2
 URL      : https://repo1.maven.org/maven2/org/pegdown/pegdown/1.2.1/pegdown-1.2.1.jar
 Source0  : https://repo1.maven.org/maven2/org/pegdown/pegdown/1.2.1/pegdown-1.2.1.jar
 Source1  : https://repo1.maven.org/maven2/org/pegdown/pegdown/1.2.1/pegdown-1.2.1.pom
+Source2  : https://repo1.maven.org/maven2/org/pegdown/pegdown/1.6.0/pegdown-1.6.0.jar
+Source3  : https://repo1.maven.org/maven2/org/pegdown/pegdown/1.6.0/pegdown-1.6.0.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -25,6 +27,7 @@ data components for the mvn-pegdown package.
 
 
 %prep
+%setup -q -n META-INF
 
 %build
 
@@ -35,6 +38,12 @@ cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/org/pegdown/pegdown/1.2
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/pegdown/pegdown/1.2.1
 cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/pegdown/pegdown/1.2.1/pegdown-1.2.1.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/pegdown/pegdown/1.6.0
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/pegdown/pegdown/1.6.0/pegdown-1.6.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/pegdown/pegdown/1.6.0
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/pegdown/pegdown/1.6.0/pegdown-1.6.0.pom
+
 
 %files
 %defattr(-,root,root,-)
@@ -43,3 +52,5 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/pegdown/pegdown/1.2
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/org/pegdown/pegdown/1.2.1/pegdown-1.2.1.jar
 /usr/share/java/.m2/repository/org/pegdown/pegdown/1.2.1/pegdown-1.2.1.pom
+/usr/share/java/.m2/repository/org/pegdown/pegdown/1.6.0/pegdown-1.6.0.jar
+/usr/share/java/.m2/repository/org/pegdown/pegdown/1.6.0/pegdown-1.6.0.pom
