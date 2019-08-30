@@ -4,7 +4,7 @@
 #
 Name     : mvn-pegdown
 Version  : 1.2.1
-Release  : 2
+Release  : 3
 URL      : https://repo1.maven.org/maven2/org/pegdown/pegdown/1.2.1/pegdown-1.2.1.jar
 Source0  : https://repo1.maven.org/maven2/org/pegdown/pegdown/1.2.1/pegdown-1.2.1.jar
 Source1  : https://repo1.maven.org/maven2/org/pegdown/pegdown/1.2.1/pegdown-1.2.1.pom
